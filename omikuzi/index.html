@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;600;900&family=Shippori+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <title>本日のおみくじ ｜ 比良坂神社</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <p class="site-logo"><a href="../index.html">比良坂神社</a></p>
+    <nav class="global-nav">
+      <ul>
+        <li><a href="../index.html">ホーム</a></li>
+        <li><a href="../about/index.html">御由緒</a></li>
+        <li><a href="../benefit/index.html">ご利益</a></li>
+        <li><a href="../omikuzi/index.html" class="is-current" aria-current="page">おみくじ</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+  <section class="page-title">
+    <img class="kagami-mark" src="../images/kagami-shuin.png" alt="鏡朱印の意匠">
+    <h1>本日のおみくじ</h1>
+    <p class="page-lead">心を静めて、今日の運勢をお受け取りください。</p>
+  </section>
+
+  <section class="draw">
+    <div class="draw-frame">
+      <img src="./images/omikuji-box.png" alt="おみくじ箱と御神籤">
+    </div>
+
+    <button type="button" id="draw-button" class="draw-button js-only">おみくじを引く</button>
+    <noscript>
+      <p class="no-script-message">おみくじをお楽しみいただくには、JavaScriptを有効にしてください。</p>
+    </noscript>
+
+    <div id="result-area" class="result-area" aria-live="polite" aria-atomic="true" hidden>
+      <p class="result-label">今日の運勢は……</p>
+      <h2 id="result-name" class="result-name"></h2>
+      <img id="result-stamp" class="result-stamp" src="../images/kagami-shuin.png" alt="鏡朱印">
+      <p id="result-message" class="result-message"></p>
+      <button type="button" id="redraw-button" class="redraw-button js-only">もう一度引く</button>
+    </div>
+  </section>
+
+  <section class="tie-manner reveal">
+    <div class="tie-manner-inner">
+      <div class="tie-manner-frame">
+        <img src="./images/musubi-dokoro.png" alt="境内の御神籤掛けに結ばれたおみくじ">
+      </div>
+      <div class="tie-manner-text">
+        <p class="section-label">結んで納める</p>
+        <h2>御神籤掛けについて</h2>
+        <p>
+          引いたおみくじは、そのままお持ち帰りいただいても、境内の御神籤掛けに結んでお納めいただいても構いません。
+          結ぶ際は、心に浮かんだ迷いを共に結び留めるように、静かに一結びしてお納めください。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <figure class="breath">
+    <img src="./images/suzuo.png" alt="社殿の軒先に垂れる鈴緒">
+  </figure>
+
+  <section class="manners reveal">
+    <p class="section-label">参拝マナー・心得</p>
+    <h2>お参りの前に</h2>
+
+    <div class="manners-body">
+      <div class="manners-frame">
+        <img src="./images/temizu-dipper.png" alt="手水舎の柄杓">
+      </div>
+      <ul class="manners-list">
+        <li>鳥居をくぐる前には、軽く一礼をいたしましょう。</li>
+        <li>参道の中央は神様の通り道とされます。端を静かに歩きましょう。</li>
+        <li>手水舎では、まず左手、次に右手、最後に口をすすいで心身を清めます。</li>
+        <li>ご神前では、二礼二拍手一礼にて、静かに願いをお伝えください。</li>
+      </ul>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 比良坂神社</p>
+  </footer>
+
+  <script src="./script.js"></script>
+</body>
+</html>

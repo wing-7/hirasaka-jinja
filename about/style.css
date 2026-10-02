@@ -1,0 +1,335 @@
+@charset "UTF-8";
+
+:root {
+    --color-vermillion: #cc0000;
+    --color-vermillion-dark: #990000;
+    --color-ink: #1a1a1a;
+    --color-paper: #faf8f5;
+    --color-gold: #c9a86a;
+    --font-display: "Zen Old Mincho", serif;
+    --font-body: "Shippori Mincho", serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    color: var(--color-ink);
+    background-color: var(--color-paper);
+    font-family: var(--font-body);
+    line-height: 1.8;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-image: url("../images/washi-texture.png");
+    background-repeat: repeat;
+    background-size: 420px 420px;
+    opacity: 0.35;
+    pointer-events: none;
+    z-index: 999;
+    mix-blend-mode: multiply;
+}
+
+a {
+    color: inherit;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-display);
+    margin: 0;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px;
+    border-bottom: 1px solid rgba(204, 0, 0, 0.15);
+}
+
+.site-logo a {
+    font-family: var(--font-display);
+    font-size: 20px;
+    letter-spacing: 4px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.global-nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.global-nav a {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.global-nav a:hover,
+.global-nav a.is-current {
+    border-bottom: 2px solid currentColor;
+}
+
+.page-title {
+    text-align: center;
+    padding: 70px 24px 20px;
+}
+
+.kagami-mark {
+    display: block;
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 20px;
+    object-fit: contain;
+}
+
+.page-title h1 {
+    font-size: 34px;
+    letter-spacing: 10px;
+}
+
+.page-lead {
+    margin-top: 16px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #666666;
+}
+
+.section-label {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--color-vermillion);
+    margin: 0 0 12px;
+}
+
+.deity {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 60px 24px;
+}
+
+.deity-frame {
+    flex: 0 0 42%;
+    padding: 16px;
+    background-color: #ffffff;
+    border: 1px solid rgba(201, 168, 106, 0.4);
+    box-shadow: 0 10px 30px rgba(26, 26, 26, 0.08);
+}
+
+.deity-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    filter: saturate(0.85) contrast(1.02);
+}
+
+.deity-text {
+    flex: 1;
+}
+
+.deity-text h2 {
+    font-size: 26px;
+    letter-spacing: 4px;
+    margin: 8px 0 20px;
+}
+
+.deity-text .ruby {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: #777777;
+}
+
+.deity-text p {
+    font-size: 15px;
+}
+
+.history {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+    text-align: center;
+}
+
+.history h2 {
+    font-size: 24px;
+    letter-spacing: 6px;
+    margin-bottom: 28px;
+}
+
+.history p {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.breath {
+    margin: 0;
+    line-height: 0;
+}
+
+.breath img {
+    display: block;
+    width: 100%;
+    height: clamp(260px, 38vw, 460px);
+    object-fit: cover;
+    object-position: center 55%;
+    filter: saturate(0.85) contrast(1.02);
+}
+
+.highlights {
+    background-color: #f2ede4;
+    padding: 80px 24px;
+}
+
+.highlights .section-label,
+.highlights h2 {
+    text-align: center;
+}
+
+.highlights h2 {
+    font-size: 24px;
+    letter-spacing: 6px;
+    margin-bottom: 44px;
+}
+
+.highlight-main {
+    max-width: 760px;
+    margin: 0 auto 40px;
+}
+
+.highlight-main img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    filter: saturate(0.85) contrast(1.02);
+}
+
+.highlight-caption {
+    margin-top: 14px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #666666;
+    text-align: center;
+}
+
+.highlight-sub {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid rgba(204, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.highlight-sub img {
+    flex: 0 0 40%;
+    display: block;
+    width: 40%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    filter: saturate(0.85) contrast(1.02);
+}
+
+.highlight-sub-text h3 {
+    font-size: 17px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.highlight-sub-text p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: #555555;
+    margin: 0;
+}
+
+.reveal {
+    opacity: 1;
+    transform: none;
+}
+
+html.js-enabled .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+html.js-enabled .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.site-footer {
+    text-align: center;
+    padding: 28px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #777777;
+    background-color: var(--color-paper);
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 20px;
+    }
+
+    .global-nav ul {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .page-title h1 {
+        font-size: 26px;
+        letter-spacing: 6px;
+    }
+
+    .deity {
+        flex-direction: column;
+        gap: 28px;
+        padding: 40px 20px;
+    }
+
+    .deity-frame {
+        flex: none;
+        width: 70%;
+    }
+
+    .highlight-sub {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .highlight-sub img {
+        width: 100%;
+    }
+}
