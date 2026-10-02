@@ -22,7 +22,7 @@
 
 ## 公開URL
 
-
+https://wing-7.github.io/hirasaka-jinja/
 
 ## 作者
 
